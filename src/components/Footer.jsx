@@ -1,30 +1,32 @@
+import { Link } from "react-router";
+
 const Footer = () => {
 	return (
 		<footer className="py-3 my-4">
 			<ul className="nav justify-content-center border-bottom pb-3 mb-3">
 				<li className="nav-item">
-					<a href="#" className="nav-link px-2 text-body-secondary">
+					<Link to="/" className="nav-link px-2 text-body-secondary">
 						Home
-					</a>
+					</Link>
 				</li>
 				<li className="nav-item">
-					<a href="#" className="nav-link px-2 text-body-secondary">
+					<Link to="/books" className="nav-link px-2 text-body-secondary">
 						Book
-					</a>
+					</Link>
 				</li>
 				<li className="nav-item">
-					<a href="#" className="nav-link px-2 text-body-secondary">
+					<Link to="/team" className="nav-link px-2 text-body-secondary">
 						Team
-					</a>
+					</Link>
 				</li>
 				<li className="nav-item">
-					<a href="#" className="nav-link px-2 text-body-secondary">
+					<Link to="/contact" className="nav-link px-2 text-body-secondary">
 						Contact
-					</a>
+					</Link>
 				</li>
 				<li className="nav-item"></li>
 			</ul>
-			<p className="text-center text-body-secondary">&copy; {new Date().getFullYear()} | NF Academy</p>
+			<p className="text-center text-body-secondary">&copy; {new Date().getFullYear()} | Bookstore by NF Academy</p>
 		</footer>
 	);
 };

@@ -1,7 +1,9 @@
+import { Link } from "react-router";
+
 const Header = () => {
 	return (
 		<header className="px-3 navbar navbar-expand-md sticky-top bg-body py-3 mb-4 shadow-sm border-bottom">
-			<a href="/" className="navbar-brand d-inline-flex align-items-center link-body-emphasis text-decoration-none">
+			<Link to="/" className="navbar-brand d-inline-flex align-items-center link-body-emphasis text-decoration-none">
 				<i
 					className="fa-solid fa-book fa-xl"
 					style={{
@@ -10,7 +12,7 @@ const Header = () => {
 					aria-hidden="true"
 				></i>
 				<span className="ms-2 fs-4 fw-bold">bookstore</span>
-			</a>
+			</Link>
 			<button
 				className="navbar-toggler"
 				type="button"
@@ -24,26 +26,26 @@ const Header = () => {
 			</button>
 			<div className="collapse navbar-collapse my-2" id="bookstore-navbar">
 				<nav className="mx-md-auto px-3 py-sm-2">
-					<ul className="navbar-nav">
+					<ul className="navbar-nav text-sm-center">
 						<li className="nav-item">
-							<a href="#" className="nav-link px-md-3">
+							<Link to="/" className="nav-link px-md-3 header-nav-link">
 								Home
-							</a>
+							</Link>
 						</li>
 						<li className="nav-item">
-							<a href="#" className="nav-link px-md-3">
+							<Link to="/books" className="nav-link px-md-3 header-nav-link">
 								Book
-							</a>
+							</Link>
 						</li>
 						<li className="nav-item">
-							<a href="#" className="nav-link px-md-3">
+							<Link to="/team" className="nav-link px-md-3 header-nav-link">
 								Team
-							</a>
+							</Link>
 						</li>
 						<li className="nav-item">
-							<a href="#" className="nav-link px-md-3">
+							<Link to="/contact" className="nav-link px-md-3 header-nav-link">
 								Contact
-							</a>
+							</Link>
 						</li>
 					</ul>
 				</nav>

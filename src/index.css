@@ -102,6 +102,36 @@ section {
 body {
 	line-height: 1;
 }
+.header-nav-link {
+	position: relative;
+	transition: color 0.2s ease-in-out;
+}
+.header-nav-link::after {
+	position: absolute;
+	right: 0.75rem;
+	bottom: 0.25rem;
+	left: 0.75rem;
+	height: 2px;
+	background-color: var(--bs-primary);
+	content: "";
+	transform: scaleX(0);
+	transform-origin: left;
+	transition: transform 0.2s ease-in-out;
+}
+.header-nav-link:hover,
+.header-nav-link:focus-visible {
+	color: var(--bs-primary);
+}
+.header-nav-link:hover::after,
+.header-nav-link:focus-visible::after {
+	transform: scaleX(1);
+}
+@media (prefers-reduced-motion: reduce) {
+	.header-nav-link,
+	.header-nav-link::after {
+		transition: none;
+	}
+}
 ol,
 ul {
 	list-style: none;

@@ -1,19 +1,19 @@
-import Footer from "./components/Footer";
-import Header from "./components/Header";
-import Hero from "./components/Hero";
-import ProductList from "./components/ProductList";
-import Contact from "./pages/Contact";
-import Team from "./pages/Team";
+import { Route, Routes } from "react-router";
+
+import { Books, Contact, Home, Team } from "./pages";
+import { Footer, Header } from "./components";
 
 const App = () => {
 	return (
 		<>
 			<Header />
 			<div className="container">
-				<Hero />
-				<ProductList />
-				<Team />
-				<Contact />
+				<Routes>
+					<Route index element={<Home />} />
+					<Route path="/books" element={<Books />} />
+					<Route path="/team" element={<Team />} />
+					<Route path="/contact" element={<Contact />} />
+				</Routes>
 			</div>
 			<Footer />
 		</>
