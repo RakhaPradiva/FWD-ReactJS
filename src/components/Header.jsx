@@ -50,12 +50,16 @@ const Header = () => {
 					</ul>
 				</nav>
 				<div className="d-flex flex-column flex-md-row mx-2 gap-2 mt-3 mt-md-0">
+					<Link to="/login">
 					<button type="button" className="btn btn-outline-primary">
 						Login
 					</button>
+					</Link>
+					<Link to="/register">
 					<button type="button" className="btn btn-primary">
 						Register
 					</button>
+					</Link>
 				</div>
 			</div>
 		</header>
